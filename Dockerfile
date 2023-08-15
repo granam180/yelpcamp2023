@@ -1,7 +1,7 @@
 # syntax = docker/dockerfile:1
 
 # Adjust NODE_VERSION as desired
-ARG NODE_VERSION=14
+ARG NODE_VERSION=18
 FROM node:${NODE_VERSION}-slim as base
 
 LABEL fly_launch_runtime="NodeJS"
@@ -28,7 +28,7 @@ RUN npm install --production=false
 COPY --link . .
 
 # Remove development dependencies
-RUN npm install prune --production
+RUN npm prune --production
 
 
 # Final stage for app image
