@@ -20,9 +20,16 @@ This project was created using Node.js, Express, MongoDB, and Bootstrap. Passpor
 ## Run it locally
 1. Install [mongodb](https://www.mongodb.com/)
 2. Create a cloudinary account to get an API key and secret code
+3. Create a .env file (or just export manually in the terminal) in the root of the project and add the following:  
 
 ```
-git clone https://github.com/leovenom/YelpCamp.git
+CLOUDINARY_CLOUD_NAME=='<name>'
+CLOUDINARY_KEY=''<key>
+CLOUDINARY_SECRET='<secret>'
+```
+
+```
+git clone https://github.com/granam180/YelpCamp.git
 cd YelpCamp
 npm install
 ```
