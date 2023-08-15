@@ -27,6 +27,7 @@ CLOUDINARY_CLOUD_NAME=='<name>'
 CLOUDINARY_KEY=''<key>
 CLOUDINARY_SECRET='<secret>'
 ```
+## Clone
 
 ```
 git clone https://github.com/granam180/YelpCamp.git
