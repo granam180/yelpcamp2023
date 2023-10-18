@@ -61,10 +61,31 @@
                 <% })%>
             </div>
             <div class="mb-3">
+                <a href="#" class="btn btn-secondary" id="select-all-campgrounds">Select All</a>
                 <button class="btn btn-info">Update Campground</button>
             </div>
         </form>
-        <a href="/campgrounds/<%= campground._id%>">Back To Campground</a>
+        <div class="mb-1">
+            <a href="/campgrounds/<%= campground._id%>">Back To Campground</a>
+        </div>
+        <div class="mb-3">
+            <a href="/campgrounds/">All Campgrounds</a>
+        </div>
 
     </div>
 </div>
+
+<script>
+    document.getElementById('select-all-campgrounds').addEventListener('click', function () {
+        const checkboxes = document.querySelectorAll('input[name="deleteImages[]"]');
+        // checkboxes.forEach(function (checkbox) {
+        //     checkbox.checked = true;
+        // });
+        const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = !allChecked; // Toggle the checked status
+        });
+        // Update the button text
+        selectAllButton.textContent = allChecked ? 'Select All' : 'Unselect All';      
+    });
+</script>

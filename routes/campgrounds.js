@@ -23,6 +23,8 @@ router.route('/:id')
 
 router.get('/:id/edit', isLoggedIn, isAuthor, catchAsync(campgrounds.renderEditForm))
 
+router.post('/:id/selectAll', isLoggedIn, isAuthor, catchAsync(campgrounds.selectAllCampgrounds));    
+
 
 
 module.exports = router;

@@ -129,7 +129,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/duwo74l5p/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com/dpup7mvh2/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://res.cloudinary.com/douqbebwk/",
                 "https://images.unsplash.com/",
             ],

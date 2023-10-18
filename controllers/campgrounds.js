@@ -76,3 +76,28 @@ module.exports.deleteCampground = async (req, res) => {
     req.flash('success', 'Successfully deleted campground')
     res.redirect('/campgrounds');
 }
+
+module.exports.selectAllCampgrounds = async (req, res) => {
+    const { id } = req.params;
+
+    // Find the album by ID
+    const campground = await Campground.findById(id);
+
+    if (!campground) {
+        req.flash('error', 'Campground not found');
+        return res.redirect('/campgrounds');
+    }
+
+    // Mark all checkboxes for deletion
+    campground.images.forEach(image => {
+        image.delete = true;
+    });
+    console.log("🚀 ~ file: campgrounds.js:95 ~ module.exports.selectAllCampgrounds= ~ campground.images:", campground.images)
+    
+
+    // Save the updated album
+    await campground.save();
+
+    req.flash('success', 'All images selected for deletion');
+    res.redirect(`/campgrounds/${id}/edit`);
+};
