@@ -1,7 +1,13 @@
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
     container: 'cluster-map',
-    style: 'mapbox://styles/mapbox/outdoors-v11',
+    // style: 'mapbox://styles/mapbox/outdoors-v12',
+    // Bubbles
+    // style: 'mapbox://styles/joeybbox/clb1i0whb001b15o7tjf1pl9x',
+    // Mineral
+    // style: 'mapbox://styles/joeybbox/clareeejy001y14ljrwcstfwt',
+    // Purple
+    style: 'mapbox://styles/joeybbox/cl090crmb000015nou2s398gh',
     center: [-103.59179687498357, 40.66995747013945],
     zoom: 3
 });

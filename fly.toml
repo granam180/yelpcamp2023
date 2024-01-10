@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for red-dream-5518 on 2023-10-04T15:56:41-04:00
+# fly.toml app configuration file generated for campground-blog on 2023-10-22T16:38:50-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "red-dream-5518"
+app = "campground-blog"
 primary_region = "iad"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
@@ -12,7 +12,7 @@ kill_timeout = "5s"
   auto_rollback = true
 
 [build]
-  builder = "heroku/buildpacks:20"
+  builder = "heroku/builder:22"
 
 [env]
   PORT = "8080"

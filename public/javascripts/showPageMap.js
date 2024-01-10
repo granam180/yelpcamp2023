@@ -3,9 +3,9 @@
 mapboxgl.accessToken = mapToken; // mapToken defined on SHOW PAGE
 const map = new mapboxgl.Map({
     container: 'map',
-    // style: 'mapbox://styles/mapbox/light-v10', // stylesheet location
-    // style: 'mapbox://styles/joeybbox/clareeejy001y14ljrwcstfwt',
-    style: 'mapbox://styles/mapbox/outdoors-v12',
+    // Mineral style 
+    style: 'mapbox://styles/joeybbox/clareeejy001y14ljrwcstfwt',
+    // style: 'mapbox://styles/mapbox/outdoors-v12',
     center: campground.geometry.coordinates, // starting position [lng, lat]
     zoom: 11 // starting zoom
 });
